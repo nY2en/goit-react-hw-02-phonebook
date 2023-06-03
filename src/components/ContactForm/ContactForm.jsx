@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 import {
   Form,
@@ -73,5 +74,9 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  dataGrab: PropTypes.func.isRequired,
+};
 
 export default ContactForm;

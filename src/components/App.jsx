@@ -40,6 +40,8 @@ class App extends Component {
       el.name.toLowerCase().includes(normalizedFilter)
     );
 
+    const { filter } = this.state;
+
     return (
       <div
         style={{
@@ -57,10 +59,7 @@ class App extends Component {
           <ContactForm dataGrab={this.addContact} />
 
           <h2>Contacts</h2>
-          <Filter
-            value={this.state.filter}
-            onFilterChange={this.onFilterChange}
-          />
+          <Filter value={filter} onFilterChange={this.onFilterChange} />
 
           <ContactList
             contacts={filteredContacts}
