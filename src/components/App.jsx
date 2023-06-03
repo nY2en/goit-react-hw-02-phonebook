@@ -16,7 +16,7 @@ class App extends Component {
     const isInContacts = contacts.find(({ name }) => name === contact.name);
 
     isInContacts
-      ? alert('sdasdasd')
+      ? alert(`${contact.name} is already in contacts`)
       : this.setState({ contacts: [...contacts, contact] });
   };
 
